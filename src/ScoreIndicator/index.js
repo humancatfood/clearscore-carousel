@@ -9,7 +9,8 @@ import Slider from './Slider';
 const indicatorStyle = css({
   width: 300,
   height: 300,
-  borderRadius: 300,
+  borderRadius: '100%',
+  overflow: 'hidden',
   maxWidth: '90%',
   backgroundColor: 'rgba(0, 0, 0, 0.6)',
   position: 'relative',

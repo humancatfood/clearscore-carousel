@@ -34,7 +34,18 @@
       "error",
       "always"
     ],
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "comma-dangle": ["warn", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline"
+    }],
+    "key-spacing": ["warn", {
+      "beforeColon": false,
+      "afterColon": true
+    }]
   },
   "overrides": [
     {

@@ -4,28 +4,49 @@ import './index.css';
 
 
 import ScoreIndicator from './ScoreIndicator';
+import SlideText from './ScoreIndicator/components/SlideText';
+import SlideNumber from './ScoreIndicator/components/SlideNumber';
 
 import creditReportInfo from './creditReportInfo.json';
 
 
 
+const {
+  creditReportInfo: {
+    score,
+    maxScoreValue,
+    equifaxScoreBandDescription,
+    currentLongTermDebt,
+    currentLongTermCreditLimit,
+    changeInLongTermDebt,
+  },
+} = creditReportInfo;
+
 const slides = [
   {
     render: () => (
-      <div>
-        <h1>Score Indicator</h1>
-        <div>{creditReportInfo.creditReportInfo.score}</div>
-      </div>
-    )
+      <>
+        <SlideText>Your credit score is</SlideText>
+        <SlideNumber>{ score }</SlideNumber>
+        <SlideText>out of <b>{ maxScoreValue }</b></SlideText>
+        <SlideText>{ equifaxScoreBandDescription }</SlideText>
+      </>
+    ),
   },
   {
     render: () => (
-      <div>
-        <h1>Long Term Dept</h1>
-        <div>{creditReportInfo.creditReportInfo.currentLongTermDebt}</div>
-      </div>
-    )
-  }
+      <>
+        <SlideText>Your long term dept total</SlideText>
+        <SlideNumber>{ currentLongTermDebt }</SlideNumber>
+        <SlideText>Total credit limit { currentLongTermCreditLimit || 0 }</SlideText>
+        <SlideText>
+          {
+            changeInLongTermDebt ? `Change from last month ${changeInLongTermDebt}` : 'No change from last month'
+          }
+        </SlideText>
+      </>
+    ),
+  },
 ];
 
 

@@ -5,20 +5,23 @@ import { css, cx } from 'emotion';
 
 const paginationStyle = css({
   position: 'absolute',
-  bottom: '25%',
-  left: 0,
-  width: '100%',
+  bottom: '10%',
+  left: '20%',
+  width: '60%',
   display: 'flex',
-  justifyContent: 'space-evenly',
+  justifyContent: 'center',
 });
 
 const paginationTickStyle = css({
   width: 10,
   height: 10,
   borderRadius: '100%',
-  backgroundColor: 'white',
+  margin: '0 5px',
+  cursor: 'pointer',
+  border: '2px solid white',
+  boxSizing: 'border-box',
   '&.active': {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
   }
 });
 
