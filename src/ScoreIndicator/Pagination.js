@@ -23,18 +23,24 @@ const paginationTickStyle = css({
 });
 
 
-const Pagination = ({ numPages, currentPage, setCurrentPage }) => (
-  <div className={paginationStyle}>
-    {
-      Array(numPages).fill(undefined).map((_, index) => (
-        <div
-          key={index}
-          onClick={() => setCurrentPage(index)}
-          className={cx(paginationTickStyle, {active: index === currentPage})}
-        ></div>
-      ))
-    }
-  </div>
-);
+const Pagination = ({ numPages, currentPageIndex, setCurrentPageIndex }) => {
+  if (numPages > 1) {
+    return (
+      <div className={paginationStyle}>
+        {
+          Array(numPages).fill(undefined).map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentPageIndex(index)}
+              className={cx(paginationTickStyle, {active: index === currentPageIndex})}
+            ></div>
+          ))
+        }
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
 
 export default Pagination;
