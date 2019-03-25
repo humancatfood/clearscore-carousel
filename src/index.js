@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExampleScoreIndicator } from './ScoreIndicator';
+import ExampleScoreIndicator from './ScoreIndicator/example';
 
 
 

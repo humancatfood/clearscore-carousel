@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScoreIndicator should render 1`] = `
-<h1>
-  ScoreIndicator
-</h1>
+Array [
+  <h1>
+    ScoreIndicator
+  </h1>,
+  <pre />,
+]
 `;

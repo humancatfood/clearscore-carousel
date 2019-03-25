@@ -3,5 +3,5 @@ const DATA_URL = 'https://s3.amazonaws.com/cdn.clearscore.com/native/interview_t
 
 
 export const fetchReportInfo = () => fetch(DATA_URL)
-  .then(data => data.json)
+  .then(response => response.json())
   .catch(console.error.bind(null, 'error fetching data:'));

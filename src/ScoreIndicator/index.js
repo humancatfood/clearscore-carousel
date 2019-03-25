@@ -1,35 +1,14 @@
 import React from 'react';
 
-import { css } from 'emotion';
 
 
-
-const ScoreIndicator = () => (
-  <h1>
-    ScoreIndicator
-  </h1>
+const ScoreIndicator = ({ data }) => (
+  <>
+    <h1>
+      ScoreIndicator
+    </h1>
+    <pre>{ JSON.stringify(data, null, 2) }</pre>
+  </>
 );
 
-
-
 export default ScoreIndicator;
-
-
-/* Example */
-
-const style = css`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ExampleScoreIndicator = () => {
-
-  return (
-    <div className={style}>
-      <ScoreIndicator />
-    </div>
-  );
-
-}
