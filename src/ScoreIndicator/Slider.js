@@ -3,8 +3,6 @@ import { css, cx } from 'emotion';
 
 
 
-
-
 const sliderStyle = css({
   width: '100%',
   height: '100%',
@@ -20,6 +18,14 @@ const slideStyle = css({
   alignItems: 'center',
   opacity: 0,
   transition: 'opacity 100ms linear',
+  ':before': {
+    content: '""',
+    flex: '1 1 15%',
+  },
+  ':after': {
+    content: '""',
+    flex: '1 1 25%',
+  },
 });
 
 const slideStyleActive = css({

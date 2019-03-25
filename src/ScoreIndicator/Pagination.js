@@ -22,7 +22,7 @@ const paginationTickStyle = css({
   boxSizing: 'border-box',
   '&.active': {
     backgroundColor: 'white',
-  }
+  },
 });
 
 
