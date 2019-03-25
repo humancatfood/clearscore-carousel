@@ -6,11 +6,12 @@ import Slider from './Slider';
 
 
 
-const style = css({
+const indicatorStyle = css({
   width: 300,
   height: 300,
+  borderRadius: 300,
   maxWidth: '90%',
-  backgroundColor: 'grey',
+  backgroundColor: 'rgba(0, 0, 0, 0.6)',
   position: 'relative',
 });
 
@@ -23,7 +24,7 @@ const ScoreIndicator = ({ slides }) => {
   console.log('slideNum:', slideNum);
 
   return (
-    <div className={style}>
+    <div className={indicatorStyle}>
       <Slider
         slides={slides}
         currentSlideNum={slideNum}
