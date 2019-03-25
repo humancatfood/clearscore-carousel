@@ -17,22 +17,22 @@ const indicatorStyle = css({
 
 const ScoreIndicator = ({ slides }) => {
 
-  const [ slideNum, setSlideNum ] = useState(0);
+  const [ currentSlideIndex, setCurrentSlideIndex ] = useState(0);
 
   console.log('ScoreIndicator:');
   console.log('slides:', slides);
-  console.log('slideNum:', slideNum);
+  console.log('slideNum:', currentSlideIndex);
 
   return (
     <div className={indicatorStyle}>
       <Slider
         slides={slides}
-        currentSlideNum={slideNum}
+        currentSlideIndex={currentSlideIndex}
       />
       <Pagination
         numPages={slides.length}
-        currentPage={slideNum}
-        setCurrentPage={setSlideNum}
+        currentPageIndex={currentSlideIndex}
+        setCurrentPageIndex={setCurrentSlideIndex}
       />
     </div>
   );

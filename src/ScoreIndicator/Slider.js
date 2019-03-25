@@ -3,46 +3,49 @@ import { css, cx } from 'emotion';
 
 
 
-const frameStyle = css({
-  width: '100%',
-  height: '100%',
-  overflow: 'hidden',
-});
 
 
 const sliderStyle = css({
   width: '100%',
   height: '100%',
   display: 'flex',
-  transition: 'transform 200ms ease-in-out'
+  transition: 'transform 200ms ease-in-out',
 });
 
 const slideStyle = css({
-  flex: 1
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  opacity: 0,
+  transition: 'opacity 100ms linear',
 });
 
-const Slider = ({ slides, currentSlideNum }) => {
+const slideStyleActive = css({
+  opacity: 1,
+});
+
+
+
+const Slider = ({ slides, currentSlideIndex }) => {
 
   const slideTransformation = css({
     width: `${slides.length * 100}%`,
-    transform: `translateX(-${100 * currentSlideNum / slides.length}%)`,
+    transform: `translateX(-${100 * currentSlideIndex / slides.length}%)`,
   });
 
   return (
-    <div className={frameStyle}>
-      <div className={cx(sliderStyle, slideTransformation)}>
-        {
-          slides.map((slide, index) => (
-            <div key={index} className={slideStyle}>
-              {
-                index === currentSlideNum ?
-                  slide.render() :
-                  null
-              }
-            </div>
-          ))
-        }
-      </div>
+    <div className={cx(sliderStyle, slideTransformation)}>
+      {
+        slides.map((slide, index) => (
+          <div key={index} className={cx(slideStyle, {[slideStyleActive]: index === currentSlideIndex})}>
+            {
+              slide.render()
+            }
+          </div>
+        ))
+      }
     </div>
   );
 };
