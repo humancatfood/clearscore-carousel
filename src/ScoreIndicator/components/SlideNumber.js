@@ -13,7 +13,7 @@ const style = css({
 
 
 const SlideNumber = ({ children }) => (
-  <h1 className={style}>{ children }</h1>
+  <p className={style}>{ children }</p>
 );
 
 export default SlideNumber;
