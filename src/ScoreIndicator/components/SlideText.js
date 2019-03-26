@@ -3,22 +3,23 @@ import { css, cx } from 'emotion';
 
 
 
-const style = css({
+export const baseStyle = css({
   margin: 4,
   color: 'white',
 });
 
-const styleHighlight = css({
+export const styleHighlight = cx(baseStyle, css({
   color: '#a9cdd6',
-});
+}));
 
-const SlideText = ({ highlight=false, ...props }) => (
+const SlideText = ({ highlight=false, className='', ...props }) => (
   <p
     className={cx(
-      style,
       {
         [styleHighlight]: highlight,
+        [baseStyle]: !highlight,
       },
+      className,
     )}
     {...props}
   />

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
 
 
 
-const style = css({
+export const baseStyle = css({
   margin: 5,
   color: '#a9cdd6',
   fontSize: '4rem',
@@ -12,8 +12,13 @@ const style = css({
 });
 
 
-const SlideNumber = ({ children }) => (
-  <p className={style}>{ children }</p>
+const SlideNumber = ({ children, className='', ...props }) => (
+  <p
+    className={cx(baseStyle, className)}
+    {...props}
+  >
+    { children }
+  </p>
 );
 
 export default SlideNumber;
