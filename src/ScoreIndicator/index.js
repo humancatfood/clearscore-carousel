@@ -3,6 +3,7 @@ import { css } from 'emotion';
 
 import Pagination from './Pagination';
 import Slider from './Slider';
+import Arc from './Arc';
 
 
 
@@ -19,17 +20,19 @@ const indicatorStyle = css({
 const ScoreIndicator = ({ slides=[] }) => {
 
   const [ currentSlideIndex, setCurrentSlideIndex ] = useState(0);
+  const currentSlide = slides[currentSlideIndex];
 
   return (
-    <div className={indicatorStyle}>
+    <div className={ indicatorStyle }>
+      <Arc value={ currentSlide.arcValue || 0 } />
       <Slider
-        slides={slides}
-        currentSlideIndex={currentSlideIndex}
+        slides={ slides }
+        currentSlideIndex={ currentSlideIndex }
       />
       <Pagination
-        numPages={slides.length}
-        currentPageIndex={currentSlideIndex}
-        setCurrentPageIndex={setCurrentSlideIndex}
+        numPages={ slides.length }
+        currentPageIndex={ currentSlideIndex }
+        setCurrentPageIndex={ setCurrentSlideIndex }
       />
     </div>
   );

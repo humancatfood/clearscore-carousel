@@ -35,6 +35,7 @@ const slides = [
         <SlideText highlight>{ equifaxScoreBandDescription }</SlideText>
       </>
     ),
+    arcValue: score / maxScoreValue,
   },
   {
     render: () => (
