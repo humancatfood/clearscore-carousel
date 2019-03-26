@@ -3,7 +3,7 @@ import { css, cx } from 'emotion';
 
 
 
-const paginationStyle = css({
+export const paginationStyle = css({
   position: 'absolute',
   bottom: '10%',
   left: '20%',
@@ -12,31 +12,34 @@ const paginationStyle = css({
   justifyContent: 'center',
 });
 
-const paginationTickStyle = css({
+export const paginationTickStyle = css({
   width: 10,
   height: 10,
   borderRadius: '100%',
   margin: '0 5px',
+  padding: 0,
   cursor: 'pointer',
   border: '2px solid white',
   boxSizing: 'border-box',
+  backgroundColor: 'transparent',
   '&.active': {
     backgroundColor: 'white',
   },
 });
 
 
-const Pagination = ({ numPages, currentPageIndex, setCurrentPageIndex }) => {
+const Pagination = ({ numPages=0, currentPageIndex, setCurrentPageIndex }) => {
   if (numPages > 1) {
     return (
       <div className={paginationStyle}>
         {
           Array(numPages).fill(undefined).map((_, index) => (
-            <div
+            <button
+              type="button"
               key={index}
               onClick={() => setCurrentPageIndex(index)}
               className={cx(paginationTickStyle, {active: index === currentPageIndex})}
-            ></div>
+            ></button>
           ))
         }
       </div>
