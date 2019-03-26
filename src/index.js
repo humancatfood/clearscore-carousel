@@ -23,6 +23,7 @@ const {
   },
 } = creditReportInfo;
 
+
 const slides = [
   {
     render: () => (

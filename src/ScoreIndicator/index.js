@@ -16,13 +16,9 @@ const indicatorStyle = css({
   position: 'relative',
 });
 
-const ScoreIndicator = ({ slides }) => {
+const ScoreIndicator = ({ slides=[] }) => {
 
   const [ currentSlideIndex, setCurrentSlideIndex ] = useState(0);
-
-  console.log('ScoreIndicator:');
-  console.log('slides:', slides);
-  console.log('slideNum:', currentSlideIndex);
 
   return (
     <div className={indicatorStyle}>

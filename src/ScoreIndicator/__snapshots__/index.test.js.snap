@@ -1,10 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScoreIndicator should render 1`] = `
-Array [
-  <h1>
-    ScoreIndicator
-  </h1>,
-  <pre />,
-]
+<div
+  className="css-qxoi2a"
+>
+  <div
+    className="css-xmumj8"
+  >
+    <div
+      className="css-1c5jdsr"
+    >
+      <p
+        className="css-tqelfc"
+      >
+        Blabla
+      </p>
+    </div>
+    <div
+      className="css-1sghin0"
+    >
+      <p
+        className="css-1r4s34n"
+      >
+        50
+      </p>
+    </div>
+    <div
+      className="css-1sghin0"
+    >
+      <p
+        className="css-1r4s34n"
+      >
+        100
+      </p>
+      <br />
+      <br />
+      <p
+        className="css-1r4s34n"
+      >
+        50
+      </p>
+      <br />
+      <p
+        className="css-tqelfc"
+      >
+        50
+      </p>
+      <br />
+    </div>
+  </div>
+  <div
+    className="css-i65pe3"
+  >
+    <button
+      className="css-1w5ai0h active"
+      onClick={[Function]}
+      type="button"
+    />
+    <button
+      className="css-1w5ai0h"
+      onClick={[Function]}
+      type="button"
+    />
+    <button
+      className="css-1w5ai0h"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+</div>
 `;
