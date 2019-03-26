@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![ClearScore](https://github.com/ClearScore/tech-screen/blob/master/assets/clearscore.png)
 
-## Available Scripts
+# Carousel
 
-In the project directory, you can run:
+## Purpose
 
-### `npm start`
+The purpose of the task is to increase familiarity between the developer and the code.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We will be using the output of this task in the next step in the interview process.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Time-frame
 
-### `npm test`
+We expect this task to take *one evening* to complete.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You do not have to complete all the tasks, but please be aware of [the purpose)(#purpose) above and take note of [what we're looking for](../README.md#what-were-looking-for)
 
-### `npm run build`
+## Background
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A developer is halfway through a `score indicator feature` card and has been called away.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+It is now up to you to finish the feature ready to release.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## The Task
 
-### `npm run eject`
+Build our circular score indicator, as shown on [clearscore.com/account/](https://www.clearscore.com/account/) and [https://youtu.be/tIjtcL5Z0Wk?t=5](https://youtu.be/tIjtcL5Z0Wk?t=5).
+ * [Desktop example](/docs/score-indicator-desktop.jpg)
+ * [Mobile Example](/docs/score-indicator-mobile.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Send your solution as a link to a public git repository with clear instructions and your thoughts in the README.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The data can be requested from [https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json](https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ 1. The carousel should contain at least 2 slides.
+ 2. the slides should animate from slide 1 to slide 2
+ 3. Slide 1 should show the 'score indicator'
+ 4. Slide 2 should show 'long term debt'.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Stretch goal
 
-## Learn More
+ 1. Show the given score in the middle and with an arc outside that represents the score out of 700
+ 2. The arc animates on load
+ 3. Add a bouncing effect to the end of the animation of the arc
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ * Node version >= 9.3.0
+ * Yarn is used as the package manager
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ * Run: `yarn start:webpack`
+ * Run: `yarn start:dev` _(in a new terminal)_
+ * Goto: `http://localhost:3000/`
