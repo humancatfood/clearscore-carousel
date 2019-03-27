@@ -2,6 +2,7 @@
 
 This is an attempt at the [ClearScore Carousel Coding Challenge](https://github.com/ClearScore/tech-screen/tree/master/carousel)
 
+View the result here: https://humancatfood.github.io/clearscore-carousel/
 
 ## How to run
 
