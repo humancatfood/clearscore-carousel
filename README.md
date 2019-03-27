@@ -2,6 +2,7 @@
 
 This is an attempt at the [ClearScore Carousel Coding Challenge](https://github.com/ClearScore/tech-screen/tree/master/carousel)
 
+View the result here: https://humancatfood.github.io/clearscore-carousel/
 
 ## How to run
 
@@ -29,11 +30,12 @@ The entry-point, `src/index.js`
 
 ### Styling:
 
-- I didn't know exactly which colours and fonts to use, but they're should be trivial to replace
+- I didn't know exactly which colours and fonts to use, but they're trivial to replace
 - the `SlideText` component has a boolean `highlight` prop, which colours the text differently, this could be
   - applied to other components
   - extended to other effects like `emphasize` or `flash` or whatnot
 - the `Spacer` component could have optional levels of spacing (`1`, `2`, `3`, etc) which could translate directly to `flex-grow` values applied to the rendered `br` element
+- the responsiveness is a bit rudimentary for now. To be actually usable for different screen-sizes this needs careful testing and tweaking 
 
 ### Effects:
 
