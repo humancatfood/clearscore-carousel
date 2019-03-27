@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css, cx } from 'emotion';
 
 
@@ -24,5 +25,9 @@ const SlideText = ({ highlight=false, className='', ...props }) => (
     {...props}
   />
 );
+
+SlideText.propTypes = {
+  highlight: PropTypes.bool,
+};
 
 export default SlideText;

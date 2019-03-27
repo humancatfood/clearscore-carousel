@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'emotion';
 
 import Pagination from './Pagination';
@@ -36,6 +37,13 @@ const ScoreIndicator = ({ slides=[] }) => {
       />
     </div>
   );
+};
+
+ScoreIndicator.propTypes = {
+  slides: PropTypes.arrayOf(PropTypes.shape({
+    render: PropTypes.func.isRequired,
+    arcValue: PropTypes.number,
+  })).isRequired,
 };
 
 export default ScoreIndicator;
