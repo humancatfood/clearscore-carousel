@@ -9,13 +9,23 @@ import Arc from './Arc';
 
 
 const indicatorStyle = css({
-  width: 300,
-  height: 300,
+  width: 180,
+  height: 180,
+  fontSize: 10,
   borderRadius: '100%',
   overflow: 'hidden',
-  maxWidth: '90%',
   backgroundColor: 'rgba(0, 0, 0, 0.6)',
   position: 'relative',
+  '@media (min-width: 380px)': {
+    width: 240,
+    height: 240,
+    fontSize: 14,
+  },
+  '@media (min-width: 520px)': {
+    width: 320,
+    height: 320,
+    fontSize: 18,
+  },
 });
 
 const ScoreIndicator = ({ slides=[] }) => {

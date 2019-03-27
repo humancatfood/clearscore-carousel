@@ -13,13 +13,14 @@ export const paginationStyle = css({
 });
 
 export const paginationTickStyle = css({
-  width: 10,
-  height: 10,
+  fontsize: 'inherit',
+  width: '0.6em',
+  height: '0.6em',
   borderRadius: '100%',
-  margin: '0 5px',
+  margin: '0 0.3em',
   padding: 0,
   cursor: 'pointer',
-  border: '2px solid white',
+  border: '0.2em solid white',
   boxSizing: 'border-box',
   backgroundColor: 'transparent',
   '&.active': {

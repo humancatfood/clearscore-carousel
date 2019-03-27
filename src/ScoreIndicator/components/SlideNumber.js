@@ -7,7 +7,7 @@ import { css, cx } from 'emotion';
 export const baseStyle = css({
   margin: 5,
   color: '#a9cdd6',
-  fontSize: '4rem',
+  fontSize: '4em',
   fontWeight: 'lighter',
 });
 
