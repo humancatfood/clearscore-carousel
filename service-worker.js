@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/clearscore-carousel/precache-manifest.32afae104929e2ccfae5fba8b478cbe2.js"
+  "/clearscore-carousel/precache-manifest.815af4189b8b11e315e3ede20e28327e.js"
 );
 
 workbox.clientsClaim();
