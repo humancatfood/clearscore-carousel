@@ -29,7 +29,7 @@ The entry-point, `src/index.js`
 
 ### Styling:
 
-- I didn't know exactly which colours and fonts to use, but they're should be trivial to replace
+- I didn't know exactly which colours and fonts to use, but they're trivial to replace
 - the `SlideText` component has a boolean `highlight` prop, which colours the text differently, this could be
   - applied to other components
   - extended to other effects like `emphasize` or `flash` or whatnot
