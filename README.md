@@ -34,6 +34,7 @@ The entry-point, `src/index.js`
   - applied to other components
   - extended to other effects like `emphasize` or `flash` or whatnot
 - the `Spacer` component could have optional levels of spacing (`1`, `2`, `3`, etc) which could translate directly to `flex-grow` values applied to the rendered `br` element
+- the responsiveness is a bit rudimentary for now. To be actually usable for different screen-sizes this needs careful testing and tweaking 
 
 ### Effects:
 
