@@ -16,10 +16,10 @@ This is an attempt at the [ClearScore Carousel Coding Challenge](https://github.
 
 ## How to read/use the code
 
-The entry-point, `src/index.js`  
+The entry-point, `src/index.js`
 
 - imports the `ScoreIndicator` component from `src/ScoreIndicator.js`
-- constructs a list of slides (using the sample data from `creditReportInfo.json`), each of which has 
+- constructs a list of slides (using the sample data from `creditReportInfo.json`), each of which has
   - a `render` function which outputs a list of ScoreIndicator components to be shown in the indicator (at the moment there are `SlideText`, `SlideNumber` and a `Spacer` component
   - an optional `arcValue` field, which can be set to a value between `0.0` and `1.0` and triggers the arc to be displayed when the slide comes into view
 - renders a `ScoreIndicator` using these slides to the screen
@@ -37,10 +37,12 @@ The entry-point, `src/index.js`
 
 ### Effects:
 
-- there's no way to archive the blur-effect of the original example, but there is a possible work-around: 
+- there's no way to archive the blur-effect of the original example, but there is a possible work-around:
   - detect the `ScoreIndicator`'s parent elements' background
   - apply that background to the `ScoreIndicator`
   - use JavaScript to figure out the correct sizing and offset to line up the two backgrounds
   - apply a blur-filter to the `ScoreIndicator`'s background
-  
 
+### Misc:
+
+- seeing how the arc and its animation are stretch-goals, I didn't write any tests for them yet

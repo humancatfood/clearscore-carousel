@@ -9,27 +9,27 @@ exports[`Pagination should render 3`] = `
   className="css-i65pe3"
 >
   <button
-    className="css-1w5ai0h"
+    className="css-1mdttzm"
     onClick={[Function]}
     type="button"
   />
   <button
-    className="css-1w5ai0h"
+    className="css-1mdttzm"
     onClick={[Function]}
     type="button"
   />
   <button
-    className="css-1w5ai0h"
+    className="css-1mdttzm"
     onClick={[Function]}
     type="button"
   />
   <button
-    className="css-1w5ai0h"
+    className="css-1mdttzm"
     onClick={[Function]}
     type="button"
   />
   <button
-    className="css-1w5ai0h"
+    className="css-1mdttzm"
     onClick={[Function]}
     type="button"
   />
