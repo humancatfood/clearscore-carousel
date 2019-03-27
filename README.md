@@ -1,53 +1,46 @@
-![ClearScore](https://github.com/ClearScore/tech-screen/blob/master/assets/clearscore.png)
+# Coding Test: ClearScore Carousel
 
-# Carousel
+This is an attempt at the [ClearScore Carousel Coding Challenge](https://github.com/ClearScore/tech-screen/tree/master/carousel)
 
-## Purpose
 
-The purpose of the task is to increase familiarity between the developer and the code.
+## How to run
 
-We will be using the output of this task in the next step in the interview process.
+1. clone and cd into the repo
+2. run `npm install`
+3. run `npm start`
+4. point your browser at `localhost:3000`
 
-## Time-frame
+4a. run `npm test -- --coverage` to see results of testing
 
-We expect this task to take *one evening* to complete.
+(replace `npm` with `yarn` depending on personal taste)
 
-You do not have to complete all the tasks, but please be aware of [the purpose)(#purpose) above and take note of [what we're looking for](../README.md#what-were-looking-for)
+## How to read/use the code
 
-## Background
+The entry-point, `src/index.js`  
 
-A developer is halfway through a `score indicator feature` card and has been called away.
+- imports the `ScoreIndicator` component from `src/ScoreIndicator.js`
+- constructs a list of slides (using the sample data from `creditReportInfo.json`), each of which has 
+  - a `render` function which outputs a list of ScoreIndicator components to be shown in the indicator (at the moment there are `SlideText`, `SlideNumber` and a `Spacer` component
+  - an optional `arcValue` field, which can be set to a value between `0.0` and `1.0` and triggers the arc to be displayed when the slide comes into view
+- renders a `ScoreIndicator` using these slides to the screen
 
-It is now up to you to finish the feature ready to release.
 
-## The Task
+## Thoughts/improvements
 
-Build our circular score indicator, as shown on [clearscore.com/account/](https://www.clearscore.com/account/) and [https://youtu.be/tIjtcL5Z0Wk?t=5](https://youtu.be/tIjtcL5Z0Wk?t=5).
- * [Desktop example](/docs/score-indicator-desktop.jpg)
- * [Mobile Example](/docs/score-indicator-mobile.jpg)
+### Styling:
 
-Send your solution as a link to a public git repository with clear instructions and your thoughts in the README.
+- I didn't know exactly which colours and fonts to use, but they're should be trivial to replace
+- the `SlideText` component has a boolean `highlight` prop, which colours the text differently, this could be
+  - applied to other components
+  - extended to other effects like `emphasize` or `flash` or whatnot
+- the `Spacer` component could have optional levels of spacing (`1`, `2`, `3`, etc) which could translate directly to `flex-grow` values applied to the rendered `br` element
 
-The data can be requested from [https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json](https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json)
+### Effects:
 
- 1. The carousel should contain at least 2 slides.
- 2. the slides should animate from slide 1 to slide 2
- 3. Slide 1 should show the 'score indicator'
- 4. Slide 2 should show 'long term debt'.
+- there's no way to archive the blur-effect of the original example, but there is a possible work-around: 
+  - detect the `ScoreIndicator`'s parent elements' background
+  - apply that background to the `ScoreIndicator`
+  - use JavaScript to figure out the correct sizing and offset to line up the two backgrounds
+  - apply a blur-filter to the `ScoreIndicator`'s background
+  
 
-### Stretch goal
-
- 1. Show the given score in the middle and with an arc outside that represents the score out of 700
- 2. The arc animates on load
- 3. Add a bouncing effect to the end of the animation of the arc
-
-## Prerequisites
-
- * Node version >= 9.3.0
- * Yarn is used as the package manager
-
-## Getting Started
-
- * Run: `yarn start:webpack`
- * Run: `yarn start:dev` _(in a new terminal)_
- * Goto: `http://localhost:3000/`
