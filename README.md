@@ -35,15 +35,8 @@ The entry-point, `src/index.js`
   - applied to other components
   - extended to other effects like `emphasize` or `flash` or whatnot
 - the `Spacer` component could have optional levels of spacing (`1`, `2`, `3`, etc) which could translate directly to `flex-grow` values applied to the rendered `br` element
-- the responsiveness is a bit rudimentary for now. To be actually usable for different screen-sizes this needs careful testing and tweaking 
+- the responsiveness is a bit rudimentary for now. To be actually usable for different screen-sizes this needs careful testing and tweaking
 
-### Effects:
-
-- there's no way to archive the blur-effect of the original example, but there is a possible work-around:
-  - detect the `ScoreIndicator`'s parent elements' background
-  - apply that background to the `ScoreIndicator`
-  - use JavaScript to figure out the correct sizing and offset to line up the two backgrounds
-  - apply a blur-filter to the `ScoreIndicator`'s background
 
 ### Misc:
 

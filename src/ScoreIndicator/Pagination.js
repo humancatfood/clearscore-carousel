@@ -13,7 +13,7 @@ export const paginationStyle = css({
 });
 
 export const paginationTickStyle = css({
-  fontsize: 'inherit',
+  fontSize: 'inherit',
   width: '0.6em',
   height: '0.6em',
   borderRadius: '100%',
