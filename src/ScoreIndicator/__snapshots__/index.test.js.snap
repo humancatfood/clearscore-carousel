@@ -2,7 +2,7 @@
 
 exports[`ScoreIndicator should render 1`] = `
 <div
-  className="css-1ko3wyh"
+  className="css-iucq3n"
 >
   <div
     className="css-xmumj8"
@@ -53,17 +53,17 @@ exports[`ScoreIndicator should render 1`] = `
     className="css-i65pe3"
   >
     <button
-      className="css-1mdttzm active"
+      className="css-16bxzjq active"
       onClick={[Function]}
       type="button"
     />
     <button
-      className="css-1mdttzm"
+      className="css-16bxzjq"
       onClick={[Function]}
       type="button"
     />
     <button
-      className="css-1mdttzm"
+      className="css-16bxzjq"
       onClick={[Function]}
       type="button"
     />
